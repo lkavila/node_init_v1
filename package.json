@@ -1,0 +1,44 @@
+{
+  "name": "node-proyect",
+  "version": "1.0.0",
+  "description": "this is a node project with good practices ",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "npm run build && node ./build/index.js",
+    "start:dev": "nodemon --exec babel-node src/index.js",
+    "build:babel": "babel -d ./build ./src -s",
+    "build": "npm run build:babel",
+    "prettier": "prettier src/**/*.js",
+    "prettier:fix": "prettier --write src/**/*.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "good-practices",
+    "prettier",
+    "babel",
+    "mongoose"
+  ],
+  "author": "lkavila",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "eslint": "^8.4.1",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "mongodb": "^4.2.1"
+  }
+}
