@@ -9,14 +9,14 @@ const doSomethingAsync = () => {
 };
 
 const doSomething = async () => {
-  return await doSomethingAsync();
+  return console.log(await doSomethingAsync());
 };
 
 router.get('/prueba', (_req, res) => {
   console.log('Before');
-  const resolve = doSomething();
+  doSomething();
   console.log('After');
-  res.json(resolve);
+  res.json('resolve');
 });
 
 export default router;
